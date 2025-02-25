@@ -2,40 +2,22 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-void main_page();
+
 void adminlogin(); // function to call the login page
 void adminmenu();
+void addbook();
 
-void main_page() // Login preface
-{
-    int opt;
-    printf("\n\t1.Admin Login\n\t2.Member Login \n\t3.New Member Registration\n\t4.Customer\n");
-again:
+struct books
+{    
+    char book[100];
+    char authore[100];
+    int price;
 
-    printf("Login:  ");
-    scanf("%d", &opt);
+};
 
-    switch (opt)
-    {
-    case 1:
-        adminlogin();
-        break;
-    case 2:
-        // memberlogin();
-        break;
-    case 3:
-        // newregistration();
-        break;
-    case 4:
-        // customer();
-        break;
-    default:
-        printf("Invalid input\n");
-        system("cls");
-        goto again;
-        break;
-    }
-}
+struct books b;
+FILE *fp;
+
 void adminlogin() // admin login page
 {
     char username[10];
@@ -54,11 +36,13 @@ top:
     {
         printf("----------Wrong credentials--------");
         printf("\n\tWant to try again?[Y/N]  ");
-        scanf("%c", a);
+        scanf(" %c", &a);
         if (toupper(a) == 'Y')
         {
+            system("cls");
             goto top;
         }
+       
     }
 }
 
@@ -72,6 +56,7 @@ void adminmenu() // adminmenu
     switch (opt)
     {
     case 1:
+        addbook();
         break;
     case 2:
         break;
@@ -83,4 +68,19 @@ void adminmenu() // adminmenu
     default:
         break;
     }
+}
+void addbook()
+{
+    fp=fopen("book_list.txt","a");
+    if(fp==NULL)
+    {
+        printf("Error Opening file.\n");
+        exit(EXIT_FAILURE);
+    }
+    printf("\nEnter book name:  ");
+    scanf("%[^\n]",b.book);
+    printf("\nEnter author's name:  ");
+    // scanf("%[^\n]",b.a);
+    
+
 }
