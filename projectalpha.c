@@ -1,16 +1,16 @@
 #include<stdio.h>
-#include<conio.h>
+#include<string.h>
 void login();
 void menuui();
 void booklist();
 //to increase the 
-int main(){
-    //to  shwo the menu
+int main(void){
+    //to  show the menu
     printf("  -------MAIIN MENU-------\n"
         "Welcome to the BSMS\n"
         "Please LOGIN:\n");
         //login credentials area
-        void MENUUI();
+        void menuui();
 
     return  0;
 //adding a book list
