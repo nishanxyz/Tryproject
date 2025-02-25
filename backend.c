@@ -2,21 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include"admin_backend.c"
 
 void adminlogin(); // function to call the login page
 void adminmenu();
-void addbook();
-
-struct books
-{    
-    char book[100];
-    char authore[100];
-    int price;
-
-};
-
-struct books b;
-FILE *fp;
 
 void adminlogin() // admin login page
 {
@@ -45,7 +34,6 @@ top:
        
     }
 }
-
 void adminmenu() // adminmenu
 {
     int opt;
@@ -68,19 +56,4 @@ void adminmenu() // adminmenu
     default:
         break;
     }
-}
-void addbook()
-{
-    fp=fopen("book_list.txt","a");
-    if(fp==NULL)
-    {
-        printf("Error Opening file.\n");
-        exit(EXIT_FAILURE);
-    }
-    printf("\nEnter book name:  ");
-    scanf("%[^\n]",b.book);
-    printf("\nEnter author's name:  ");
-    // scanf("%[^\n]",b.a);
-    
-
 }
