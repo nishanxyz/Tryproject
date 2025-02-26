@@ -5,7 +5,7 @@
 
 
 void addbook();
-
+void available_books();
 struct books
 {    
     char book[100];
@@ -69,3 +69,26 @@ void addbook()
 
     printf("\nBook added successfully!\n");
 }
+
+
+void available_books()
+{
+    FILE *file = fopen("book_list.txt", "r");
+    if (file == NULL)
+    {
+        printf("Error opening file or file does not exist.\n");
+        return;
+    }
+
+    char line;
+    while ((line = fgetc(file)) != EOF)
+    {
+        putchar(line);
+    }
+
+    fclose(file);
+}
+
+
+
+
