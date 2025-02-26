@@ -47,10 +47,12 @@ void adminmenu() // adminmenu
         addbook();
         break;
     case 2:
-        available_books();
         break;
     case 3:
+<<<<<<< HEAD
     //  sales();
+=======
+>>>>>>> 0808dea4fd1c9c7ea20ade3182d626c93eb7b354
         break;
     case 4:
         break;
