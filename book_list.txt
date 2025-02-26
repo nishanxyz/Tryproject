@@ -1,6 +1,6 @@
-No.   | Book Name            | Author               | Genre                | Price     
+No.   | Book Name            | Author               | Genre                                                                                                | Price     
 -------------------------------------------------------------
-1     | One of us is lying   | Karen M.McManus      | Mystrey,Young adult literature | RS 1099      
-2     | Shirish ko Phool     | Bishnu Kumari Waiba  | Novel                | RS 899       
-3     | Atomic Habits        | James Clear          | Self-Help            | RS 1299      
-3     | Solo Leveling        | Chungong             | Portal Fantasy,Manhwa | RS 1599      
+1     | One of us is lying   | Karen M.McManus      | Mystrey Yound adult literature                                                                       | RS 1099      
+1     | Atomic Habits        | James Clear          | Self-Helping                                                                                         | RS 1299      
+1     | Shirish ko phool     | Bishnu Kumari Waiba  | Novel                                                                                                | RS 899       
+1     | Solo leveling        | Chungong             | Portal Fantasy, Manhwa                                                                               | RS 1599      
