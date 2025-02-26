@@ -47,8 +47,10 @@ void adminmenu() // adminmenu
         addbook();
         break;
     case 2:
+        available_books();
         break;
     case 3:
+     sales();
         break;
     case 4:
         break;
