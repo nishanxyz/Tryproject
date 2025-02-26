@@ -3,23 +3,21 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-
+void sales();
 void addbook();
 void available_books();
 struct books
-{    
+{
     char book[100];
     char author[100];
+    char genre[100];
     int price;
-
 };
 
 struct books b;
-FILE *fp;
-
-
 void addbook()
 {
+    char ans;
     FILE *fp = fopen("book_list.txt", "a+"); // Open in append+read mode
     if (fp == NULL)
     {
@@ -33,7 +31,7 @@ void addbook()
     fseek(fp, 0, SEEK_END);
     if (ftell(fp) == 0) // If file size is 0, write the header
     {
-        fprintf(fp, "%-5s | %-20s | %-20s | %-10s\n", "No.", "Book Name", "Author", "Price");
+        fprintf(fp, "%-5s | %-20s | %-20s | %-20s | %-10s\n", "No.", "Book Name", "Author","Genre","Price");
         fprintf(fp, "-------------------------------------------------------------\n");
     }
     else
@@ -54,18 +52,30 @@ void addbook()
     fseek(fp, 0, SEEK_END);
 
     // Take input
+    do{
     printf("\nEnter book name: ");
     scanf(" %[^\n]", b.book);
 
     printf("Enter author's name: ");
     scanf(" %[^\n]", b.author);
 
+    printf("Enter book genre: ");
+    scanf(" %[^\n]", b.genre);
+
     printf("Enter price: ");
     scanf("%d", &b.price);
+    
 
     // Write book details with serial number
-    fprintf(fp, "%-5d | %-20s | %-20s | RS %-10d\n", serialNumber, b.book, b.author, b.price);
+    fprintf(fp, "%-5d | %-20s | %-20s | %-20s | RS %-10d\n", serialNumber, b.book,b.author,b.genre, b.price);
+    printf("\nDo you wish to add more data[Y/N]   ");
+    getchar();
+    scanf("%c",&ans);
+    ans=toupper(ans);
+    }while(ans=='Y');
+    
     fclose(fp);
+    
 
     printf("\nBook added successfully!\n");
 }
@@ -87,4 +97,21 @@ void available_books()
     fclose(file);
 }
 
+void sales()
+{
+    FILE *fp;
+    fp = fopen("Sales_report.txt", "r");
+    if(fp==NULL)
+    {
+        printf("Error!!!!!\n");
+        exit(EXIT_FAILURE);
+    }
+    char line;
+    while(line=fgetc(fp)!=EOF)
+    {
+        putchar(line);
+    }
+    fclose(fp);
 
+    
+}
