@@ -9,7 +9,7 @@ int main(void)
     printf("\t-------MAIIN MENU-------\n\tWelcome to the Store\n");
     int opt;
 
-    printf("\n\tYou Are:---\n\t1.Admin Login\n\t2.Member Login \n\t3.New Member Registration\n\t4.Customer\n");
+    printf("\n\tYou Are:---\n\t1.Admin Login\n\t2.Customer\n");
 again:
 
     printf("Login:  ");
@@ -21,14 +21,9 @@ again:
         adminlogin();
         break;
     case 2:
-        // memberlogin();
+        customer_menu();
         break;
-    case 3:
-        // newregistration();
-        break;
-    case 4:
-        // customer();
-        break;
+
     default:
         printf("Invalid input\n");
         system("cls");
