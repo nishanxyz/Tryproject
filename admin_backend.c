@@ -24,7 +24,7 @@ void addbook()
     fseek(fp, 0, SEEK_END);
     if (ftell(fp) == 0) // If file size is 0, write the header
     {
-        fprintf(fp, "%-5s | %-20s | %-20s | %-100s | %-10s\n", "No.", "Book Name", "Author", "Genre", "Price");
+        fprintf(fp, "%-5s | %-20s | %-20s | %-70s | %-10s\n", "No.", "Book Name", "Author", "Genre", "Price");
         fprintf(fp, "-------------------------------------------------------------\n");
     }
     else
@@ -60,7 +60,7 @@ void addbook()
         scanf("%d", &b.price);
 
         // Write book details with serial number
-        fprintf(fp, "%-5d | %-20s | %-20s | %-100s | RS %-10d\n", serialNumber, b.book, b.author, b.genre, b.price);
+        fprintf(fp, "%-5d | %-20s | %-20s | %-70s | RS %-10d\n", serialNumber, b.book, b.author, b.genre, b.price);
         printf("\nDo you wish to add more data[Y/N]   ");
         getchar();
         scanf("%c", &ans);
