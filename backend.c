@@ -65,5 +65,5 @@ void customer_menu()
     printf("------Book store------");
     printf("\n\tWelcome to our book store");
     printf("\n\tHow Can we Help you:");
-    printf("\n\t1.Search book\n\t2.");
+    printf("\n\t1.Search book\n\t2.Sell book ");
 }
