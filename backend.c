@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include"admin_backend.c"
+// #include"customer_backend.c"
 
 void adminlogin(); // function to call the login page
 void adminmenu();
@@ -38,7 +39,7 @@ void adminmenu() // adminmenu
 {
     int opt;
     system("cls");
-    printf("\n-------Welcome to admin page:-------\n\t1.Add new book\n\t2.Available Books\n\t3.Total sales\n\t4.Members List");
+    printf("\n-------Welcome to admin page:-------\n\t1.Add new book\n\t2.Available Books\n\t3.Total sales");
     printf("\n\t Option:-- ");
     scanf("%d", &opt);
     switch (opt)
@@ -47,17 +48,22 @@ void adminmenu() // adminmenu
         addbook();
         break;
     case 2:
+        available_books();
         break;
     case 3:
-<<<<<<< HEAD
-    //  sales();
-=======
->>>>>>> 0808dea4fd1c9c7ea20ade3182d626c93eb7b354
+     sales();
         break;
-    case 4:
-        break;
-
     default:
+    printf("Invalid Input");
         break;
     }
+}
+void customer_menu()
+{
+    int opt;
+    system("cls");
+    printf("------Book store------");
+    printf("\n\tWelcome to our book store");
+    printf("\n\tHow Can we Help you:");
+    printf("\n\t1.Search book\n\t2.");
 }
