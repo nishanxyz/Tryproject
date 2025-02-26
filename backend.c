@@ -2,8 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include"admin_backend.c"
-// #include"customer_backend.c"
+#include "admin_backend.c"
+#include "customer_backend.c"
 
 void adminlogin(); // function to call the login page
 void adminmenu();
@@ -32,7 +32,6 @@ top:
             system("cls");
             goto top;
         }
-       
     }
 }
 void adminmenu() // adminmenu
@@ -51,13 +50,14 @@ void adminmenu() // adminmenu
         available_books();
         break;
     case 3:
-     sales();
+        sales();
         break;
     default:
-    printf("Invalid Input");
+        printf("Invalid Input");
         break;
     }
 }
+
 void customer_menu()
 {
     int opt;
@@ -65,5 +65,23 @@ void customer_menu()
     printf("------Book store------");
     printf("\n\tWelcome to our book store");
     printf("\n\tHow Can we Help you:");
-    printf("\n\t1.Search book\n\t2.Sell book ");
+    printf("\n\t1.Search book\n\t2.Sell book\n\t3.Cart");
+    printf("\n\tOption:-");
+    scanf("%d", &opt);
+    switch (opt)
+    {
+    case 1:
+        searchby();
+        break;
+    case 2:
+        // sellbook();
+        break;
+    case 3:
+        // cart();
+        break;
+
+    default:
+        printf("Incorrect Input");
+        break;
+    }
 }
