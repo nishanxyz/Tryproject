@@ -69,14 +69,6 @@ void addbook()
 
     printf("\nBook added successfully!\n");
 }
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> main
 void available_books()
 {
     FILE *file = fopen("book_list.txt", "r");
@@ -94,8 +86,5 @@ void available_books()
 
     fclose(file);
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> main
