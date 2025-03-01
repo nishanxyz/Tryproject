@@ -4,3 +4,7 @@ No.   | Book Name            | Author               | Genre                     
 1     | Atomic Habits        | James Clear          | Self-Helping                                                                                         | RS 1299      
 1     | Shirish ko phool     | Bishnu Kumari Waiba  | Novel                                                                                                | RS 899       
 1     | Solo leveling        | Chungong             | Portal Fantasy, Manhwa                                                                               | RS 1599      
+5     | Game of Thrones      | George R.R Martin    | Drama Series                                                           | RS 2999      
+6     | The Habit Journal    | James clear          | Self-Helping                                                           | RS 999       
+8     | Ikigai               | Francesc Miralles    | Self-help                                                              | RS 1899      
+9     | Norwegian wood       | Haruki Murakami      | Novel                                                                  | RS 1399      

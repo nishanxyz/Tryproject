@@ -47,6 +47,7 @@ void addbook()
     // Take input
     do
     {
+        serialNumber++;
         printf("\nEnter book name: ");
         scanf(" %[^\n]", b.book);
 
