@@ -7,15 +7,15 @@ int main(void)
 {
 
     printf("\t-------MAIIN MENU-------\n\tWelcome to the Store\n");
-    int opt;
+    int jpt;
 
     printf("\n\tYou Are:---\n\t1.Admin Login\n\t2.Member Login\n\t3.Customer\n");
 again:
 
     printf("Login:  ");
-    scanf("%d", &opt);
+    scanf("%d", &jpt);
 
-    switch (opt)
+    switch (jpt)
     {
     case 1:
         adminlogin();
